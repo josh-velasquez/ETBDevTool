@@ -99,7 +99,7 @@ const ManipulateJwt: React.FC<ManipulateJwtProps> = ({ onShowSnackbar }) => {
   return (
     <Box sx={{ padding: 2 }}>
       <ToolInfo
-        title={Tools.JWT_MANIPULATE}
+        title={Tools.JwtManipulate}
         info={"Allows you to manipulate JWT data and generate new JWTs."}
       />
       <TextField

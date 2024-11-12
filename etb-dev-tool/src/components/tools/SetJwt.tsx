@@ -47,7 +47,7 @@ const SetJwt: React.FC<SetJwtProps> = ({ onShowSnackbar }) => {
   return (
     <Box sx={{ p: 2 }}>
       <ToolInfo
-        title={Tools.JWT_SET}
+        title={Tools.JwtSet}
         info={
           "Click the button below to set the superuser JWT for the application. This will override any existing JWT token in local storage."
         }

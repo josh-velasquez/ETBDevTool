@@ -26,7 +26,7 @@ const drawerWidth = 200;
 
 export default function App() {
   const [selectedTool, setSelectedTool] = useState<Tools | null>(
-    Tools.CLIPBOARD
+    Tools.Clipboard
   );
 
   return (

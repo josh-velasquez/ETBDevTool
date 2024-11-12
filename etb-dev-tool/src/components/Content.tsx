@@ -7,12 +7,13 @@ import ManipulateJwt from "./tools/ManipulateJwt";
 
 import SetJwt from "./tools/SetJwt";
 import TestFormatter from "./tools/TestFormatter";
+import Clipboard from "./tools/Clipboard";
 
 export enum Tools {
-  CLIPBOARD = "Clipboard",
-  JWT_SET = "Set JWT",
-  JWT_MANIPULATE = "Manipulate JWT",
-  TEST_FORMATTER = "Test Output Formatter",
+  Clipboard = "Clipboard",
+  JwtSet = "Set JWT",
+  JwtManipulate = "Manipulate JWT",
+  TestFormatter = "Test Output Formatter",
 }
 
 interface ContentProps {
@@ -51,22 +52,16 @@ const Content: React.FC<ContentProps> = ({ selectedTool }) => {
               mt: 1,
             }}
           >
-            {selectedTool === Tools.CLIPBOARD && (
-              <TextField
-                label="Enter Text"
-                fullWidth
-                variant="outlined"
-                multiline
-                sx={{ marginBottom: 2, overflow: "auto" }}
-              />
+            {selectedTool === Tools.Clipboard && (
+              <Clipboard onShowSnackbar={showSnackbar} />
             )}
-            {selectedTool === Tools.JWT_SET && (
+            {selectedTool === Tools.JwtSet && (
               <SetJwt onShowSnackbar={showSnackbar} />
             )}
-            {selectedTool === Tools.JWT_MANIPULATE && (
+            {selectedTool === Tools.JwtManipulate && (
               <ManipulateJwt onShowSnackbar={showSnackbar} />
             )}
-            {selectedTool === Tools.TEST_FORMATTER && (
+            {selectedTool === Tools.TestFormatter && (
               <TestFormatter onShowSnackbar={showSnackbar} />
             )}
           </Box>

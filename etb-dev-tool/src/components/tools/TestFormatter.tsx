@@ -29,7 +29,7 @@ const TestFormatter: React.FC<TestFormatterProps> = ({ onShowSnackbar }) => {
   return (
     <Box sx={{ padding: 2 }}>
       <ToolInfo
-        title={Tools.TEST_FORMATTER}
+        title={Tools.TestFormatter}
         info={"Formats Jest output to be more readable."}
       />
       <TextField
